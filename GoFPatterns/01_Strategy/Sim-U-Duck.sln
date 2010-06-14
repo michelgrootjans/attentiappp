@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sim_U_Duck", "Sim_U_Duck\Sim_U_Duck.csproj", "{9C30F46B-27FF-4B4D-9EE0-05952D398C76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sim_U_Duck.Tests", "Sim_U_Duck.Tests\Sim_U_Duck.Tests.csproj", "{689E8080-3511-44E3-BF1D-0060338D2DA9}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +13,6 @@ Global
 		{9C30F46B-27FF-4B4D-9EE0-05952D398C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C30F46B-27FF-4B4D-9EE0-05952D398C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C30F46B-27FF-4B4D-9EE0-05952D398C76}.Release|Any CPU.Build.0 = Release|Any CPU
-		{689E8080-3511-44E3-BF1D-0060338D2DA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{689E8080-3511-44E3-BF1D-0060338D2DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{689E8080-3511-44E3-BF1D-0060338D2DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{689E8080-3511-44E3-BF1D-0060338D2DA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
