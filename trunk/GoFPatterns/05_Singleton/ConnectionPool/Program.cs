@@ -1,17 +1,15 @@
 ﻿using System;
 
-namespace ConnectionPoolDemo
+namespace LoadBalancer
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            for (int i = 0; i < 10; i++)
+            var server = new Server();
+            for (var i = 0; i < 10; i++)
             {
-                Connection connection = new Connection();
-                connection.Open();
-                //Do something useful here
-                connection.Close();
+                server.GetWebPage("index.htm");
             }
             Console.ReadLine();
         }

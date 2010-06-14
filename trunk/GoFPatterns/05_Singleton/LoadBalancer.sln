@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConnectionPool", "ConnectionPool\ConnectionPool.csproj", "{8E24D9C5-FECF-4E19-BF70-950E11BA2EF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadBalancer", "ConnectionPool\LoadBalancer.csproj", "{8E24D9C5-FECF-4E19-BF70-950E11BA2EF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
