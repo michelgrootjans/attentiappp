@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConnectionPool
+namespace ConnectionPoolDemo
 {
     class Program
     {
