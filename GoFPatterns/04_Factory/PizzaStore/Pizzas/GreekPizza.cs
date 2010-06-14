@@ -4,7 +4,7 @@
     {
         public override string Name
         {
-            get { return "Greek pizza"; }
+            get { return "Greek Pizza"; }
         }
     }
 }
