@@ -18,7 +18,7 @@ namespace WeatherMonitor.Displays
 
         private void PredictFuture(double temperature, double humidity, double pressure)
         {
-            //To be implemented
+            //Not important for this demo
         }
     }
 }
