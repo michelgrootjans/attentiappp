@@ -8,7 +8,7 @@
     <ProjectGuid>{8E24D9C5-FECF-4E19-BF70-950E11BA2EF6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConnectionPool</RootNamespace>
+    <RootNamespace>ConnectionPoolDemo</RootNamespace>
     <AssemblyName>ConnectionPool</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
