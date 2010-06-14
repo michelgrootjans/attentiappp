@@ -7,8 +7,9 @@ namespace Composite
         private static void Main(string[] args)
         {
             var menu = new FullMenu();
+            var waitress = new Waitress("Julie", menu);
 
-            menu.PrintAllItems();
+            waitress.ShowMenu();
 
             Console.ReadLine();
         }
