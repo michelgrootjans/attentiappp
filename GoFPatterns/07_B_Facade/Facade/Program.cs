@@ -10,6 +10,7 @@ namespace Facade
         private static readonly ProjectorScreen screen = new ProjectorScreen();
         private static readonly LcdProjector projector = new LcdProjector();
         private static readonly Amplifier amplifier = new Amplifier();
+        private static readonly HdDvdPlayer dvdPlayer = new HdDvdPlayer();
 
         static void Main(string[] args)
         {
@@ -27,19 +28,18 @@ namespace Facade
 
             //turn projector on
             projector.On();
-            var dvd = new HdDvdPlayer();
-            projector.SetInput(dvd);
+            projector.SetInput(dvdPlayer);
             projector.SetWidescreenMode();
 
             //switch the amp on
             amplifier.On();
-            amplifier.SetSource(dvd);
+            amplifier.SetVideoSource(dvdPlayer);
             amplifier.SurroundSound = true;
             amplifier.Volume = 5;
 
             //play movie
-            dvd.TurnOn();
-            dvd.Play(movie);
+            dvdPlayer.TurnOn();
+            dvdPlayer.Play(movie);
 
             Console.ReadLine();
         }

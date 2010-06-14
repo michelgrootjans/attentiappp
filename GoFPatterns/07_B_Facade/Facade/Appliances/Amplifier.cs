@@ -9,7 +9,7 @@ namespace Facade.Appliances
             Console.WriteLine("Amplifier turns on");
         }
 
-        public void SetSource(IVideoSource source)
+        public void SetVideoSource(IVideoSource source)
         {
             Console.WriteLine("Amplifier source set to " + source.Name);
         }
