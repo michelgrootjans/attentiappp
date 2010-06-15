@@ -4,11 +4,11 @@ namespace LoadBalancer
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
-            var server = new Server();
             for (var i = 0; i < 10; i++)
             {
+                var server = new Server();
                 server.GetWebPage("index.htm");
             }
             Console.ReadLine();

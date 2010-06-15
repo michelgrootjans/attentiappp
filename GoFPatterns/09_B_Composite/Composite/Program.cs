@@ -4,7 +4,7 @@ namespace Composite
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             var menu = new FullMenu();
             var waitress = new Waitress("Julie", menu);

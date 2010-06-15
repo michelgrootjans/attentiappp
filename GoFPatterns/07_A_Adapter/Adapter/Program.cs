@@ -6,7 +6,7 @@ namespace Adapter
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             var ducks = new List<IDuck>
                             {
