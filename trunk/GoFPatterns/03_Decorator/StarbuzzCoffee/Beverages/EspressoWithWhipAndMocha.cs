@@ -1,6 +1,6 @@
 ﻿namespace StarbuzzCoffee.Beverages
 {
-    public class EspressoWihWhipAndMocha : Beverage
+    public class EspressoWithWhipAndMocha : Beverage
     {
         public override string Description
         {

@@ -13,7 +13,7 @@ namespace StarbuzzCoffee
             var orders = new List<Beverage>
                              {
                                  new DarkRoastWithSteamedMilk(),
-                                 new EspressoWihWhipAndMocha(),
+                                 new EspressoWithWhipAndMocha(),
                                  new HouseBlendWithSoy()
                              };
 

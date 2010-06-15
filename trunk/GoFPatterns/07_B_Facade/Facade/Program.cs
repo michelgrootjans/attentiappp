@@ -12,7 +12,7 @@ namespace Facade
         private static readonly Amplifier amplifier = new Amplifier();
         private static readonly HdDvdPlayer dvdPlayer = new HdDvdPlayer();
 
-        static void Main(string[] args)
+        static void Main()
         {
             var movie = new Dvd("Harry Potter 8");
 

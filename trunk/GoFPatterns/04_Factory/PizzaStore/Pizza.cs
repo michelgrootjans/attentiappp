@@ -26,7 +26,7 @@ namespace PizzaStore
 
         public void Box()
         {
-            Console.WriteLine("Place pissa in official PizzaStore box");
+            Console.WriteLine("Place pizza in official PizzaStore box");
         }
     }
 }
