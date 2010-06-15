@@ -12,8 +12,9 @@ namespace WeatherMonitor.Displays
 
         private void UpdateDisplay()
         {
-            Console.WriteLine("Weather statiscitcs:");
-            Console.WriteLine("- Temperature: {0}°C min - {1}°C avg {2}°C max", 5.6, 12.5, 21.4);
+            Console.WriteLine("Weather statistics:");
+            Console.WriteLine("- Temperature: {0}°C min - {1}°C avg - {2}°C max", 5.6, 12.5, 21.4);
+            Console.WriteLine();
         }
 
         private void AddToStatistics(DateTime timeStamp, double temperature, double humidity, double pressure)
