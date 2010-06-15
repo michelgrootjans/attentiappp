@@ -14,6 +14,7 @@ namespace WeatherMonitor.Displays
         {
             Console.WriteLine("Weather forecast:");
             Console.WriteLine("- {0} with temperatures between {1}°C and {2}°C", "Cloudy", 8, 10);
+            Console.WriteLine();
         }
 
         private void PredictFuture(double temperature, double humidity, double pressure)
