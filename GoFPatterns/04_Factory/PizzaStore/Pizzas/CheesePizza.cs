@@ -2,9 +2,12 @@
 {
     internal class CheesePizza : Pizza
     {
-        public override string Name
+        public CheesePizza()
         {
-            get { return "Cheese Pizza"; }
+            Name = "Sauce and Cheese Pizza";
+            dough = "Thin Crust Dough";
+            sauce = "Marinara Sauce";
+            toppings.Add("Grated Reggiano Cheese");
         }
     }
 }
