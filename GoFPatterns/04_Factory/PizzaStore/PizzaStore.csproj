@@ -49,6 +49,7 @@
     <Compile Include="Pizzas\CheesePizza.cs" />
     <Compile Include="Pizzas\GreekPizza.cs" />
     <Compile Include="Pizzas\PepperoniPizza.cs" />
+    <Compile Include="Pizzeria.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
