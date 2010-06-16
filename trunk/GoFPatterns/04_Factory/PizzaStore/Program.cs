@@ -8,10 +8,8 @@ namespace PizzaStore
         {
             try
             {
-                Console.Write("What kind of pizza would you like: ");
-
                 var pizzeria = new Pizzeria();
-                var pizza = pizzeria.OrderPizza(Console.ReadLine());
+                var pizza = pizzeria.OrderPizza("cheese");
 
                 Console.WriteLine("Your {0} is ready.", pizza.Name);
             }

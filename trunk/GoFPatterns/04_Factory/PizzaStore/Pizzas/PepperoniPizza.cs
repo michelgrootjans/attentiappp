@@ -2,9 +2,14 @@
 {
     internal class PepperoniPizza : Pizza
     {
-        public override string Name
+        public PepperoniPizza()
         {
-            get { return "Pizza Pepperoni"; }
+            Name = "Spicy Pepperoni Pizza";
+            dough = "Thin Crust Dough";
+            sauce = "Spicy Salsa";
+            toppings.Add("Slices of chorizo");
+            toppings.Add("Small olives");
+
         }
     }
 }

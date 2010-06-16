@@ -1,21 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Threading;
 
 namespace PizzaStore.Pizzas
 {
     internal abstract class Pizza
     {
-        public abstract string Name { get; }
+        public string Name { get; protected set; }
+        protected string dough;
+        protected string sauce;
+        protected readonly ICollection<string> toppings = new List<string>();
 
         public void Prepare()
         {
             Console.WriteLine("Preparing {0}", Name);
             Thread.Sleep(500);
-            Console.WriteLine("Tossing dough...");
+            Console.WriteLine("Tossing {0}...", dough);
             Thread.Sleep(500);
-            Console.WriteLine("Adding sauce...");
+            Console.WriteLine("Adding {0}...", sauce);
             Thread.Sleep(500);
             Console.WriteLine("Adding toppings...");
+            foreach (var topping in toppings)
+            {
+                Console.WriteLine("- " + topping);
+            }
             Thread.Sleep(500);
         }
 
