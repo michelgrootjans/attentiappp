@@ -45,10 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pizzas\ClamPizza.cs" />
     <Compile Include="Pizzas\Pizza.cs" />
     <Compile Include="Pizzas\CheesePizza.cs" />
     <Compile Include="Pizzas\GreekPizza.cs" />
     <Compile Include="Pizzas\PepperoniPizza.cs" />
+    <Compile Include="Pizzas\VeggiePizza.cs" />
     <Compile Include="Pizzeria.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
