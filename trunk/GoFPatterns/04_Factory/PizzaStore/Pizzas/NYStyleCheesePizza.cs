@@ -6,7 +6,7 @@
         {
             Name = "NY Style Sauce and Cheese Pizza";
             dough = "Thin Crust Dough";
-            sauce = "Martinara Sauce";
+            sauce = "Marinara Sauce";
 
             toppings.Add("Greated Reggiano Cheese");
         }
