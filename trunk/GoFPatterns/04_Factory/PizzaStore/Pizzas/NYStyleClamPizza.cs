@@ -1,13 +1,12 @@
 ﻿namespace PizzaStore.Pizzas
 {
-    public class ClamPizza : Pizza
+    internal class NYStyleClamPizza : Pizza
     {
-        public ClamPizza()
+        public NYStyleClamPizza()
         {
-            Name = "Clam Pizza";
+            Name = "NY Style Clam Pizza";
             dough = "Thin Crust Dough";
             sauce = "Marinara Souce";
-
             toppings.Add("Reggiano");
             toppings.Add("Fresh Clams");
         }

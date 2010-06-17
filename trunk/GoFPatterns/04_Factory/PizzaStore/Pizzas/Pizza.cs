@@ -34,7 +34,7 @@ namespace PizzaStore.Pizzas
             Thread.Sleep(2000);
         }
 
-        public void Cut()
+        public virtual void Cut()
         {
             Console.WriteLine("Cutting the pizza into diagonal slices");
             Thread.Sleep(500);
