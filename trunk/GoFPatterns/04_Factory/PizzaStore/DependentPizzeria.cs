@@ -7,50 +7,47 @@ namespace PizzaStore
     {
         public Pizza OrderPizza(string style, string type)
         {
-            Pizza pizza = null;
-            if (style == "NY")
-            {
-                if (type == "cheese")
-                {
-                    pizza = new NYStyleCheesePizza();
-                }
-                else if (type == "clam")
-                {
-                    pizza = new NYStyleClamPizza();
-                }
-                else if (type == "veggie")
-                {
-                    pizza = new NYStyleVeggiePizza();
-                }
-                else if (type == "pepperoni")
-                {
-                    pizza = new NYStylePepperoniPizza();
-                }
-            }
-            else if (style == "Chicago")
-            {
-                if (type == "cheese")
-                {
-                    pizza = new ChicagoStyleCheesePizza();
-                }
-                else if (type == "clam")
-                {
-                    pizza = new ChicagoStyleClamPizza();
-                }
-                else if (type == "veggie")
-                {
-                    pizza = new ChicagoStyleVeggiePizza();
-                }
-                else if (type == "pepperoni")
-                {
-                    pizza = new ChicagoStylePepperoniPizza();
-                }
-            }
-            if (pizza == null)
-            {
-                throw new ArgumentException(string.Format("Unknown pizza: {0}.{1}", style, type));
-            }
+            var pizza = CreatePizza(style, type);
+
+            pizza.Prepare();
+            pizza.Bake();
+            pizza.Cut();
+            pizza.Box();
             return pizza;
+        }
+
+        private Pizza CreatePizza(string style, string type)
+        {
+            switch (style)
+            {
+                case "NY":
+                    switch (type)
+                    {
+                        case "cheese":
+                            return new NYStyleCheesePizza();
+                        case "clam":
+                            return new NYStyleClamPizza();
+                        case "veggie":
+                            return new NYStyleVeggiePizza();
+                        case "pepperoni":
+                            return new NYStylePepperoniPizza();
+                    }
+                    break;
+                case "Chicago":
+                    switch (type)
+                    {
+                        case "cheese":
+                            return new ChicagoStyleCheesePizza();
+                        case "clam":
+                            return new ChicagoStyleClamPizza();
+                        case "veggie":
+                            return new ChicagoStyleVeggiePizza();
+                        case "pepperoni":
+                            return new ChicagoStylePepperoniPizza();
+                    }
+                    break;
+            }
+            throw new ArgumentException(string.Format("Unknown pizza: {0}.{1}", style, type));
         }
     }
 }
