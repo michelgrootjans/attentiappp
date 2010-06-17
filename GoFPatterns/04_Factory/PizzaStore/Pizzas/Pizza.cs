@@ -20,11 +20,12 @@ namespace PizzaStore.Pizzas
             Console.WriteLine("Adding {0}...", sauce);
             Thread.Sleep(500);
             Console.WriteLine("Adding toppings...");
+            Thread.Sleep(500);
             foreach (var topping in toppings)
             {
                 Console.WriteLine("- " + topping);
+                Thread.Sleep(500);
             }
-            Thread.Sleep(500);
         }
 
         public void Bake()
