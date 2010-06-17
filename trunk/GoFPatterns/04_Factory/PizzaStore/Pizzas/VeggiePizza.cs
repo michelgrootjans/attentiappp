@@ -1,18 +1,16 @@
-﻿namespace PizzaStore.Pizzas
+namespace PizzaStore.Pizzas
 {
-    internal class PepperoniPizza : Pizza
+    public class VeggiePizza : Pizza
     {
-        public PepperoniPizza()
+        public VeggiePizza()
         {
-            Name = "Spicy Pepperoni Pizza";
+            Name = "Veggie Pizza";
             dough = "Thin Crust Dough";
-            sauce = "Marinara Sauce";
+            sauce = "Marinara Souce";
             toppings.Add("Reggiano");
             toppings.Add("Mushrooms");
             toppings.Add("Onions");
             toppings.Add("Red Peppers");
-            toppings.Add("Pepperoni");
-
         }
     }
 }

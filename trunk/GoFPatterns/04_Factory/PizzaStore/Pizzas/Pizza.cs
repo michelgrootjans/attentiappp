@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace PizzaStore.Pizzas
 {
-    internal abstract class Pizza
+    public abstract class Pizza
     {
         public string Name { get; protected set; }
         protected string dough;
