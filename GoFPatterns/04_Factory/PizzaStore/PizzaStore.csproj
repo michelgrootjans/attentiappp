@@ -45,7 +45,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pizzas\ChicagoStyleCheesePizza.cs" />
+    <Compile Include="Pizzas\ChicagoStyleClamPizza.cs" />
+    <Compile Include="Pizzas\ChicagoStylePepperoniPizza.cs" />
+    <Compile Include="Pizzas\ChicagoStyleVeggiePizza.cs" />
     <Compile Include="Pizzas\ClamPizza.cs" />
+    <Compile Include="Pizzas\NYStyleCheesePizza.cs" />
+    <Compile Include="Pizzas\NYStyleClamPizza.cs" />
+    <Compile Include="Pizzas\NYStylePepperoniPizza.cs" />
+    <Compile Include="Pizzas\NYStyleVeggiePizza.cs" />
     <Compile Include="Pizzas\Pizza.cs" />
     <Compile Include="Pizzas\CheesePizza.cs" />
     <Compile Include="Pizzas\GreekPizza.cs" />

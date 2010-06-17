@@ -1,13 +1,12 @@
-namespace PizzaStore.Pizzas
+﻿namespace PizzaStore.Pizzas
 {
-    public class VeggiePizza : Pizza
+    internal class NYStyleVeggiePizza : Pizza
     {
-        public VeggiePizza()
+        public NYStyleVeggiePizza()
         {
-            Name = "Veggie Pizza";
+            Name = "NY Style Sauce and Veggie Pizza";
             dough = "Thin Crust Dough";
             sauce = "Marinara Sauce";
-
             toppings.Add("Reggiano");
             toppings.Add("Mushrooms");
             toppings.Add("Onions");
