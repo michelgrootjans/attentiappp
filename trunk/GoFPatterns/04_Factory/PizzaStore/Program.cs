@@ -8,8 +8,8 @@ namespace PizzaStore
         {
             try
             {
-                var pizzeria = new DependentPizzeria();
-                var pizza = pizzeria.OrderPizza("NY", "cheese");
+                var pizzeria = new Pizzeria();
+                var pizza = pizzeria.OrderPizza("cheese");
 
                 Console.WriteLine("Your {0} is ready.", pizza.Name);
             }
