@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DependentPizzeria.cs" />
     <Compile Include="Pizzas\ChicagoStyleCheesePizza.cs" />
     <Compile Include="Pizzas\ChicagoStyleClamPizza.cs" />
     <Compile Include="Pizzas\ChicagoStylePepperoniPizza.cs" />
