@@ -6,7 +6,10 @@ namespace Copy
     {
         public static void Write(int c)
         {
-            throw new NotImplementedException();
+            var previousColor = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine(c);
+            Console.ForegroundColor = previousColor;
         }
     }
 }
