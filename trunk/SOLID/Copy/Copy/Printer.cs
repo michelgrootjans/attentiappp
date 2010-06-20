@@ -6,10 +6,7 @@ namespace Copy
     {
         public static void Write(int c)
         {
-            var previousColor = Console.ForegroundColor;
-            Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine(c);
-            Console.ForegroundColor = previousColor;
+            Console.WriteLine("Printer Prints: " + c);
         }
     }
 }
