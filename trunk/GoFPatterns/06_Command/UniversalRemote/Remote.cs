@@ -6,14 +6,14 @@ namespace UniversalRemote
     internal class Remote
     {
         private OutdoorLight outdoorLight;
-        private CeilinLight ceilingLight;
+        private CeilingLight ceilingLight;
         private Television tv;
         private Stereo stereo;
 
         public Remote()
         {
             outdoorLight = new OutdoorLight();
-            ceilingLight = new CeilinLight();
+            ceilingLight = new CeilingLight();
             tv = new Television();
             stereo = new Stereo();
         }
@@ -26,7 +26,7 @@ namespace UniversalRemote
                     outdoorLight.On();
                     break;
                 case 1:
-                    ceilingLight.On();
+                    ceilingLight.SwitchOn();
                     break;
                 case 2:
                     tv.On();
@@ -51,7 +51,7 @@ namespace UniversalRemote
                     outdoorLight.Off();
                     break;
                 case 1:
-                    ceilingLight.Off();
+                    ceilingLight.SwitchOff();
                     break;
                 case 2:
                     tv.Off();

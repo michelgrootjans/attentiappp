@@ -2,14 +2,14 @@
 
 namespace UniversalRemote.Appliances
 {
-    internal class CeilinLight
+    internal class CeilingLight
     {
-        public void On()
+        public void SwitchOn()
         {
             Console.WriteLine("Ceiling light switches on.");
         }
 
-        public void Off()
+        public void SwitchOff()
         {
             Console.WriteLine("Ceiling light switches off.");
         }
