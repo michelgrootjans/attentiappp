@@ -4,7 +4,8 @@ namespace Copy
     {
         public static void Main(string[] args)
         {
-            Copier.Copy();
+            var copier = new Copier();
+            copier.Copy();
         }        
     }
 }

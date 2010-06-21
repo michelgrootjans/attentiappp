@@ -2,7 +2,7 @@
 {
     public class Copier
     {
-        public static void Copy()
+        public void Copy()
         {
             int c;
             while ((c = Keyboard.Read()) != -1)
