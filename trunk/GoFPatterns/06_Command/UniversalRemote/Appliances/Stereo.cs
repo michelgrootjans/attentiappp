@@ -11,7 +11,7 @@ namespace UniversalRemote.Appliances
 
         public void SwitchOff()
         {
-            Console.WriteLine("Stereo switches on.");
+            Console.WriteLine("Stereo switches off.");
         }
 
         public void PlayCd()
