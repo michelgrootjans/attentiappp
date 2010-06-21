@@ -10,19 +10,22 @@ namespace StarbuzzCoffee
         public static void Main(string[] args)
         {
             //Create orders
-            var orders = new List<Beverage>
+            var order = new List<Beverage>
                              {
                                  new DarkRoastWithSteamedMilk(),
                                  new EspressoWithWhipAndMocha(),
                                  new HouseBlendWithSoy()
                              };
 
+            Console.WriteLine("Your order:");
+            Console.WriteLine("---------------------------------------");
             //Calculate price
-            foreach (var beverage in orders)
+            foreach (var beverage in order)
             {
                 Console.WriteLine("{0}\t{1}", beverage.Cost, beverage.Description);
             }
-            Console.WriteLine("{0}\tTotal", orders.Sum(b => b.Cost));
+            Console.WriteLine("---------------------------------------");
+            Console.WriteLine("{0}\tTotal", order.Sum(b => b.Cost));
             Console.ReadLine();
         }
     }
