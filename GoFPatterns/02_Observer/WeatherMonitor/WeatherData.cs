@@ -26,16 +26,15 @@ namespace WeatherMonitor
             forecastingDisplay.Update(temperature, humidity, pressure);
         }
 
+        //simulate getting data from real instruments
         private double GetPressure()
         {
             return 1.05;
         }
-
         private double GetHumidity()
         {
             return 0.45;
         }
-
         private double GetTemperature()
         {
             return 14.6;
