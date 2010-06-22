@@ -7,18 +7,20 @@ namespace Sim_U_Duck.Tests
     public class RedHeadDuckTests
     {
         private Duck duck;
+        private TestWriter testWriter;
 
         [SetUp]
         public void SetUp()
         {
-            duck = new RedHeadDuck();
+            testWriter = new TestWriter();
+            duck = new RedHeadDuck(testWriter);
         }
 
         [Test]
         public void test_simple_quack()
         {
             duck.Quack();
+            Assert.That(testWriter.LastMessage, Is.EqualTo("Quack!"));
         }
-
     }
 }
