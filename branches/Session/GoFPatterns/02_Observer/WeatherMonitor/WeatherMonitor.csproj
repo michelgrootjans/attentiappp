@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Displays\CurrentConditionsDisplay.cs" />
     <Compile Include="Displays\ForecastingDisplay.cs" />
+    <Compile Include="EventAggregator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Displays\StatisticsDisplay.cs" />
     <Compile Include="WeatherData.cs" />

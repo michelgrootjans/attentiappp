@@ -4,9 +4,9 @@ namespace WeatherMonitor.Displays
 {
     internal class ForecastingDisplay
     {
-        public void Update(double temperature, double humidity, double pressure)
+        public void Update(WeatherEventArgs e)
         {
-            PredictFuture(temperature, humidity, pressure);
+            PredictFuture(e.Temperature, e.Humidity, e.Pressure);
             UpdateDisplay();
         }
 

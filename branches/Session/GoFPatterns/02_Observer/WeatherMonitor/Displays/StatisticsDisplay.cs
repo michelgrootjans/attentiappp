@@ -4,9 +4,9 @@ namespace WeatherMonitor.Displays
 {
     internal class StatisticsDisplay
     {
-        public void Update(double temperature, double humidity, double pressure)
+        public void Update(WeatherEventArgs e)
         {
-            AddToStatistics(DateTime.Now, temperature, humidity, pressure);
+            AddToStatistics(DateTime.Now, e.Temperature, e.Humidity, e.Pressure);
             UpdateDisplay();
         }
 
