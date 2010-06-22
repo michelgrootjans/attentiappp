@@ -1,30 +1,35 @@
-using System;
+using Sim_U_Duck.Behaviors;
 
 namespace Sim_U_Duck.Ducks
 {
     public abstract class Duck
     {
+        protected readonly IWriter writer;
+        private readonly IQuackBehavior quackBehavior;
+        protected IFlyBehavior flyBehavior;
+
+        protected Duck(IQuackBehavior quackBehavior, IFlyBehavior flyBehavior): 
+            this(new ConsoleWriter(), quackBehavior, flyBehavior )
+        {
+        }
+
+        protected Duck(IWriter writer, IQuackBehavior quackBehavior, IFlyBehavior flyBehavior)
+        {
+            this.writer = writer;
+            this.quackBehavior = quackBehavior;
+            this.flyBehavior = flyBehavior;
+        }
+
         public abstract void Display();
 
-        public virtual void Quack()
+        public void Quack()
         {
-            Console.WriteLine("Quack!");
+            quackBehavior.Quack();
         }
-    }
 
-    public class MallardDuck : Duck
-    {
-        public override void Display()
+        public void Fly()
         {
-            Console.WriteLine("I'm a Mallard duck!");
-        }
-    }
-
-    public class RedHeadDuck : Duck
-    {
-        public override void Display()
-        {
-            Console.WriteLine("Hi! I'm a Redhead duck.");
+            flyBehavior.Fly();
         }
     }
 }

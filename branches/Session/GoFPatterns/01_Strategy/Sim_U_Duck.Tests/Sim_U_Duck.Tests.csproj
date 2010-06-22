@@ -53,6 +53,7 @@
     <Compile Include="MallardDuckTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RubberDuckTests.cs" />
+    <Compile Include="TestWriter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sim_U_Duck\Sim_U_Duck.csproj">
