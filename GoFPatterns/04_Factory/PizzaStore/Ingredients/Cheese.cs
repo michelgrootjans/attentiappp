@@ -2,7 +2,7 @@
 
 namespace PizzaStore.Ingredients
 {
-    internal abstract class Cheese
+    public abstract class Cheese
     {
         protected Cheese()
         {
@@ -10,7 +10,7 @@ namespace PizzaStore.Ingredients
         }
     }
 
-    internal class MozarellaCheese : Cheese
+    internal class MozzarellaCheese : Cheese
     {
     }
 

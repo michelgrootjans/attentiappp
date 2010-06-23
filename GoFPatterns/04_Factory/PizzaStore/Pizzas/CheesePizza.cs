@@ -2,14 +2,14 @@
 {
     internal class CheesePizza : Pizza
     {
-        public CheesePizza()
+        public CheesePizza(IPizzaIngredientsFactory factory)
         {
             Name = "Sauce and Cheese Pizza";
-            dough = "Thin Crust Dough";
-            sauce = "Marinara Sauce";
+            dough = factory.CreateDough();
+            sauce = factory.CreateSauce();
+            cheese = factory.CreateCheese();
 
-            toppings.Add("Grated Reggiano Cheese");
-            toppings.Add("Garlic");
+            Add(factory.CreateMushrooms());
         }
     }
 }

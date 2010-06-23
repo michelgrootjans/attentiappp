@@ -7,14 +7,6 @@ namespace PizzaStore.Pizzas
         public ChicagoStylePepperoniPizza()
         {
             Name = "Chicago Style Deep Dish Pepperoni Pizza";
-            dough = "Extra Thick Crust Dough";
-
-            sauce = "Marinara Sauce";
-            toppings.Add("Reggiano");
-            toppings.Add("Mushrooms");
-            toppings.Add("Onions");
-            toppings.Add("Red Peppers");
-            toppings.Add("Pepperoni");
         }
 
         public override void Cut()

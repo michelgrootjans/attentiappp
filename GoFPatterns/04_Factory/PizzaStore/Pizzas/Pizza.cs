@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading;
+using PizzaStore.Ingredients;
 
 namespace PizzaStore.Pizzas
 {
     public abstract class Pizza
     {
         public string Name { get; protected set; }
-        protected string dough;
-        protected string sauce;
-        protected readonly ICollection<string> toppings = new List<string>();
+        protected Dough dough;
+        protected Sauce sauce;
+        private readonly IList<Veggie> veggies = new List<Veggie>();
+        protected Cheese cheese;
 
         public void Prepare()
         {
@@ -19,11 +21,13 @@ namespace PizzaStore.Pizzas
             Thread.Sleep(500);
             Console.WriteLine("Adding {0}...", sauce);
             Thread.Sleep(500);
-            Console.WriteLine("Adding toppings...");
+            Console.WriteLine("Adding vegetables...");
             Thread.Sleep(500);
-            foreach (var topping in toppings)
+            Console.WriteLine("Adding {0}...", cheese);
+            Thread.Sleep(500);
+            foreach (var veggie in veggies)
             {
-                Console.WriteLine("- " + topping);
+                Console.WriteLine("- " + veggie);
                 Thread.Sleep(500);
             }
         }
@@ -44,6 +48,11 @@ namespace PizzaStore.Pizzas
         {
             Console.WriteLine("Place pizza in official PizzaStore box");
             Thread.Sleep(500);
+        }
+
+        protected void Add(Veggie veggie)
+        {
+            veggies.Add(veggie);
         }
     }
 }

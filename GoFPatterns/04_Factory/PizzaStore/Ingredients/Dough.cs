@@ -2,7 +2,7 @@
 
 namespace PizzaStore.Ingredients
 {
-    internal class Dough
+    public class Dough
     {
         public Dough()
         {

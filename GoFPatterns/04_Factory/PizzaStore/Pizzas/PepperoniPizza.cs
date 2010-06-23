@@ -2,17 +2,12 @@
 {
     internal class PepperoniPizza : Pizza
     {
-        public PepperoniPizza()
+        public PepperoniPizza(IPizzaIngredientsFactory factory)
         {
             Name = "Spicy Pepperoni Pizza";
-            dough = "Thin Crust Dough";
-            sauce = "Marinara Sauce";
+            dough = factory.CreateDough();
+            sauce = factory.CreateSauce();
 
-            toppings.Add("Reggiano");
-            toppings.Add("Mushrooms");
-            toppings.Add("Onions");
-            toppings.Add("Red Peppers");
-            toppings.Add("Pepperoni");
         }
     }
 }

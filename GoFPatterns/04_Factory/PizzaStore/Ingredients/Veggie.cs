@@ -2,7 +2,7 @@
 
 namespace PizzaStore.Ingredients
 {
-    internal abstract class Veggie
+    public abstract class Veggie
     {
         protected Veggie()
         {
