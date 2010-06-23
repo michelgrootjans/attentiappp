@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CurrentDisplayAdapter.cs" />
     <Compile Include="Displays\CurrentConditionsDisplay.cs" />
     <Compile Include="Displays\ForecastingDisplay.cs" />
     <Compile Include="EventAggregator.cs" />

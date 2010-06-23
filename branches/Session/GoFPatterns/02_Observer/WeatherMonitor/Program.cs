@@ -1,5 +1,4 @@
 using System;
-using System.IO;
 using WeatherMonitor.Displays;
 
 namespace WeatherMonitor
@@ -23,21 +22,6 @@ namespace WeatherMonitor
 
             weatherData.MeasurementsChanged();
             Console.ReadLine();
-        }
-    }
-
-    public class CurrentDisplayAdapter
-    {
-        private readonly CurrentConditionsDisplay display;
-
-        public CurrentDisplayAdapter(CurrentConditionsDisplay display)
-        {
-            this.display = display;
-        }
-
-        public void UpdateDisplay(WeatherEventArgs e)
-        {
-            display.UpdateDisplay(e.Temperature, e.Humidity, e.Pressure);
         }
     }
 }
