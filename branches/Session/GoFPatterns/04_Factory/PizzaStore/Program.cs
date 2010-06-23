@@ -2,14 +2,14 @@
 
 namespace PizzaStore
 {
-    internal class Program
+    internal static class Program
     {
         private static void Main()
         {
             try
             {
-                var pizzeria = new Pizzeria();
-                var pizza = pizzeria.OrderPizza("cheese");
+                Pizzeria pizzeria = new NYStylePizzeria();
+                var pizza = pizzeria.OrderPizza(Console.ReadLine());
 
                 Console.WriteLine("Your {0} is ready.", pizza.Name);
             }
