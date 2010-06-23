@@ -6,7 +6,7 @@
           autowire="constructor" />
 
   <object name="repository"
-          type="MovieFinder.MovieRepository, MovieFinder" />
+          type="MovieFinder.NHibernateRepository, MovieFinder" />
 
   <object name="consoleTracingInterceptor"
           type="MovieFinder.ConsoleTracingInterceptor, MovieFinder" />
