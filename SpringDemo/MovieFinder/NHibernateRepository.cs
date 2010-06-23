@@ -2,18 +2,17 @@
 
 namespace MovieFinder
 {
-    public class MovieRepository : IMovieRepository
+    public class NHibernateRepository : IRepository
     {
-        public IEnumerable<IMovie> GetMoviesByActor(string actor)
+        public IEnumerable<T> Query<T>(IQuery<T> queryObject)
         {
-            return new List<IMovie>
-                       {
-                           new Movie("Dances with wolves"),
-                           new Movie("Mr. Brooks"),
-                           new Movie("Waterwold"),
-                           new Movie("Robin Hood"),
-                           new Movie("The Bodyguard")
-                       };
+            var session = new DummySession();
+            return queryObject.Execute(session);
         }
     }
+
+    public class DummySession : ISession
+    {
+    }
+
 }

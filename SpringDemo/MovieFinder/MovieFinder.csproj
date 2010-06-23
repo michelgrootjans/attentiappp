@@ -53,7 +53,7 @@
   <ItemGroup>
     <Compile Include="ConsoleTracingInterceptor.cs" />
     <Compile Include="IMovie.cs" />
-    <Compile Include="IMovieRepository.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="IMovieService.cs" />
     <Compile Include="RetryInterceptor.cs" />
     <Compile Include="Utilities\DictionaryExtensions.cs" />

@@ -5,10 +5,10 @@ namespace MovieFinder
 {
     public class MovieService : IMovieService
     {
-        private readonly IMovieRepository repository;
+        private readonly IRepository repository;
         private readonly Random random = new Random();
 
-        public MovieService(IMovieRepository repository)
+        public MovieService(IRepository repository)
         {
             this.repository = repository;
         }
@@ -18,7 +18,7 @@ namespace MovieFinder
             Console.WriteLine("Executing GetMoviesWith");
             if(random.Next(2) == 1)
                 throw new Exception();
-            return repository.GetMoviesByActor(actor);
+            return repository.Query(new GetMoviesByActor(actor));
         }
     }
 }
