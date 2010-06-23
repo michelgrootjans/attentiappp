@@ -1,67 +1,64 @@
 ﻿using System;
-using UniversalRemote.Appliances;
+using System.Collections.Generic;
 
 namespace UniversalRemote
 {
     internal class Remote
     {
-        private OutdoorLight outdoorLight;
-        private CeilingLight ceilingLight;
-        private Television tv;
-        private Stereo stereo;
+        private readonly List<IOnCommand> onCommands;
+        private readonly List<IOffCommand> offCommands;
+        private readonly Stack<ICommand> previousCommands = new Stack<ICommand>();
 
         public Remote()
         {
-            outdoorLight = new OutdoorLight();
-            ceilingLight = new CeilingLight();
-            tv = new Television();
-            stereo = new Stereo();
+            onCommands = new List<IOnCommand>();
+            offCommands = new List<IOffCommand>();
         }
 
-        public void PushOnButton(int buttonNumber)
+        public void On(int buttonNumber)
         {
-            switch (buttonNumber)
+            if (onCommands.Count > buttonNumber)
             {
-                case 0:
-                    outdoorLight.On();
-                    break;
-                case 1:
-                    ceilingLight.SwitchOn();
-                    break;
-                case 2:
-                    tv.On();
-                    tv.SetChannel(1);
-                    break;
-                case 3:
-                    stereo.SwitchOn();
-                    stereo.SetVolume(5);
-                    stereo.PlayCd();
-                    break;
-                default:
-                    Console.WriteLine("Red light... (unknown command)");
-                    break;
+                var commandToExecute = onCommands[buttonNumber];
+                commandToExecute.Execute();
+                previousCommands.Push(commandToExecute);
+            }
+            else
+            {
+                Console.WriteLine("Red light... (unknown command)");
             }
         }
 
-        public void PushOffButton(int buttonNumber)
+        public void Off(int buttonNumber)
         {
-            switch (buttonNumber)
+            if (offCommands.Count > buttonNumber)
             {
-                case 0:
-                    outdoorLight.Off();
-                    break;
-                case 1:
-                    ceilingLight.SwitchOff();
-                    break;
-                case 2:
-                    tv.Off();
-                    break;
-                case 3:
-                    stereo.SwitchOff();
-                    break;
-                default:
-                    Console.WriteLine("Red light... (unknown command)");
-                    break;
+                var commandToExecute = offCommands[buttonNumber];
+                commandToExecute.Execute();
+                previousCommands.Push(commandToExecute);
+            }
+            else
+            {
+                Console.WriteLine("Red light... (unknown command)");
+            }
+        }
+
+        public void RegisterCommand(IOnCommand onCommand, IOffCommand offCommand)
+        {
+            onCommands.Add(onCommand);
+            offCommands.Add(offCommand);
+        }
+
+        public void Undo()
+        {
+            if (previousCommands.Count != 0)
+            {
+                var command = previousCommands.Pop();
+                command.Undo();
+            }
+            else
+            {
+                Console.WriteLine("Red light... (no command to undo)");
             }
         }
     }

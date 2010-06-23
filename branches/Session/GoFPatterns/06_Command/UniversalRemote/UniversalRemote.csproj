@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{533BC714-19E4-4CFB-9067-110BCCC29767}</ProjectGuid>
     <OutputType>Exe</OutputType>
@@ -49,6 +49,15 @@
     <Compile Include="Appliances\OutdoorLight.cs" />
     <Compile Include="Appliances\Stereo.cs" />
     <Compile Include="Appliances\Television.cs" />
+    <Compile Include="Commands\CeilingLightOffCommand.cs" />
+    <Compile Include="Commands\CeilingLightOnCommand.cs" />
+    <Compile Include="Commands\PlayCDCommand.cs" />
+    <Compile Include="Commands\PlayTvCommand.cs" />
+    <Compile Include="Commands\StereoOffCommand.cs" />
+    <Compile Include="Commands\TvOffCommand.cs" />
+    <Compile Include="ICommand.cs" />
+    <Compile Include="OutdoorLightOffCommand.cs" />
+    <Compile Include="OutdoorLightOnCommand.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Remote.cs" />
