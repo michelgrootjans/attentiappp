@@ -1,21 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <objects xmlns="http://www.springframework.net">
-  
-  <!--
-  <object name="movieService" 
-          type="MovieFinder.MovieService, MovieFinder"
-          autowire="constructor" >
-  </object>
-  
-  <object name="repository" 
-          type="MovieFinder.NHibernateRepository, MovieFinder">
-  </object>
-  
-  <object name="consoleLogger" 
-          type="MovieFinder.ConsoleLogger, MovieFinder">
-  </object>
 
-  <object id="ProxyCreator" type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+  <object name="movieService"
+          type="MovieFinder.MovieService, MovieFinder"
+          autowire="constructor" />
+
+  <object name="repository"
+          type="MovieFinder.MovieRepository, MovieFinder" />
+
+  <object name="consoleTracingInterceptor"
+          type="MovieFinder.ConsoleTracingInterceptor, MovieFinder" />
+
+  <object name="retryInterceptor"
+          type="MovieFinder.RetryInterceptor, MovieFinder">
+    <constructor-arg name="numberOfRetries" value="3" />
+  </object>
+  
+  <object id="proxyCreator" type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
     <property name="ObjectNames">
       <list>
         <value>*Service</value>
@@ -24,12 +25,11 @@
     </property>
     <property name="InterceptorNames">
       <list>
-        <value>consoleLogger</value>
+        <value>retryInterceptor</value>
+        <value>consoleTracingInterceptor</value>
       </list>
     </property>
   </object>
-  
-  -->
 
 
 </objects>

@@ -1,15 +1,16 @@
 using System;
+using MovieFinder.Utilities;
 
 namespace MovieFinder
 {
-    public class Program
+    public static class Program
     {
         public static void Main()
         {
             try
             {
-                var service = new MovieService();
-                var movies = service.GetMovieWith("Kevin Costner");
+                var service = IocContainer.GetAnImplementationOf<IMovieService>();
+                var movies = service.GetMoviesWith("Kevin Costner");
 
                 Console.WriteLine("Movies by Kevin Costner:");
                 foreach (var movie in movies)

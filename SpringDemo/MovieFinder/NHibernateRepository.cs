@@ -2,14 +2,17 @@
 
 namespace MovieFinder
 {
-    internal class MovieRepository
+    public class MovieRepository : IMovieRepository
     {
-        public List<Movie> GetMoviesByActor(string actor)
+        public IEnumerable<IMovie> GetMoviesByActor(string actor)
         {
-            return new List<Movie>
+            return new List<IMovie>
                        {
                            new Movie("Dances with wolves"),
-                           new Movie("Mr. Brooks")
+                           new Movie("Mr. Brooks"),
+                           new Movie("Waterwold"),
+                           new Movie("Robin Hood"),
+                           new Movie("The Bodyguard")
                        };
         }
     }
