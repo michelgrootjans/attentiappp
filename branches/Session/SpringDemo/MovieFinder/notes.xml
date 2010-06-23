@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <object name="movieService"
+          type="MovieFinder.MovieService, MovieFinder"
+          autowire="constructor" >
+  </object>
+  
+  <object name="repository" 
+          type="MovieFinder.NHibernateRepository, MovieFinder">
+  </object>
+  
+  <object name="consoleLogger" 
+          type="MovieFinder.ConsoleLogger, MovieFinder">
+  </object>
+
+  <object id="ProxyCreator" type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>*Service</value>
+        <value>repository</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>consoleLogger</value>
+      </list>
+    </property>
+  </object>
+
+</objects>

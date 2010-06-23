@@ -1,6 +1,6 @@
 ﻿namespace MovieFinder
 {
-    public class Movie
+    public class Movie : IMovie
     {
         public string Title { get; private set; }
 
