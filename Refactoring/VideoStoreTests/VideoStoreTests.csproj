@@ -41,7 +41,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomerTests.cs" />
+    <Compile Include="ChildrensMovieTests.cs" />
+    <Compile Include="NewCustomerTests.cs" />
+    <Compile Include="CustomerRentsRegularMovieTests.cs" />
+    <Compile Include="CustomerRentsNewReleaseTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
