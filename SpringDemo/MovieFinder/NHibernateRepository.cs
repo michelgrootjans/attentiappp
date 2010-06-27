@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MovieFinder
 {
@@ -6,6 +7,8 @@ namespace MovieFinder
     {
         public IEnumerable<T> Query<T>(IQuery<T> queryObject)
         {
+            Console.WriteLine("Executing NHibernateRepository.Query(...)");
+
             var session = new DummySession();
             return queryObject.Execute(session);
         }
