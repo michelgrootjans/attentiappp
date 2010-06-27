@@ -15,7 +15,7 @@ namespace MovieFinder
 
         public IEnumerable<IMovie> GetMoviesWith(string actor)
         {
-            Console.WriteLine("Executing GetMoviesWith");
+            Console.WriteLine("Executing MovieService.GetMoviesWith(...)");
             if(random.Next(2) == 1)
                 throw new Exception();
             return repository.Query(new GetMoviesByActor(actor));
