@@ -2,34 +2,14 @@
 
 namespace StarBuzzRecipes.Recipes
 {
-    internal class Coffee
+    internal class Coffee : Beverage
     {
-        public void Prepare()
+        protected override void PrepareBeverage()
         {
-            Console.WriteLine("Preparing a cup of coffee...");
-
-            BoilWater();
-            BrewCoffeeGrinds();
-            PourInCup();
-            AddSugarAndMilk();
+            Console.WriteLine("Coffee is brewing...");
         }
 
-        private void BoilWater()
-        {
-            Console.WriteLine("Boiling water");
-        }
-
-        private void BrewCoffeeGrinds()
-        {
-            Console.WriteLine("Dripping Coffee through filter");
-        }
-
-        private void PourInCup()
-        {
-            Console.WriteLine("Pouring into cup");
-        }
-
-        private void AddSugarAndMilk()
+        protected override void AddCondiments()
         {
             Console.WriteLine("Adding sugar and milk");
         }

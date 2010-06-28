@@ -10,6 +10,8 @@ namespace StarBuzzRecipes
             var coffee = new Coffee();
             coffee.Prepare();
 
+            Console.WriteLine();
+            
             var tea = new Tea();
             tea.Prepare();
 
