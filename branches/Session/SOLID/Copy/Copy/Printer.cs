@@ -2,9 +2,9 @@
 
 namespace Copy
 {
-    public static class Printer
+    public class Printer : IWriter
     {
-        public static void Write(int c)
+        void IWriter.Write(int c)
         {
             Console.WriteLine("Printer Prints: " + c);
         }

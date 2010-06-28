@@ -4,8 +4,8 @@ namespace Copy
     {
         public static void Main(string[] args)
         {
-            var copier = new Copier();
+            var copier = new Copier(new TapeReader(), new Screen());
             copier.Copy();
-        }        
+        }
     }
 }

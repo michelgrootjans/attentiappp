@@ -2,7 +2,7 @@
 
 namespace Copy
 {
-    public class Keyboard : IReader
+    public class TapeReader : IReader
     {
         int IReader.Read()
         {
