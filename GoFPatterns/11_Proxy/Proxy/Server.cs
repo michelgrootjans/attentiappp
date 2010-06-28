@@ -2,7 +2,7 @@
 
 namespace Proxy
 {
-    internal class Server
+    internal class Server : IServer
     {
         private int result;
 
