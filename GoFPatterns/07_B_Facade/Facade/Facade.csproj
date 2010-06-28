@@ -55,6 +55,7 @@
     <Compile Include="Appliances\Lights.cs" />
     <Compile Include="Appliances\PopcornMaching.cs" />
     <Compile Include="Appliances\ProjectorScreen.cs" />
+    <Compile Include="PartyUtility.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
