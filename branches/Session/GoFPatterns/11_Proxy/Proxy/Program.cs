@@ -6,7 +6,7 @@ namespace Proxy
     {
         private static void Main()
         {
-            var server = new Server();
+            IServer server = new ServerProxy();
 
             for (var i = 0; i < 5; i++)
             {
