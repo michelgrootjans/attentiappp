@@ -50,6 +50,7 @@
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerLogic.cs" />
     <Compile Include="CustomerLogicTests.cs" />
+    <Compile Include="CustomerPresenterTests.cs" />
     <Compile Include="CustomerTests.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
@@ -59,6 +60,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{E81C4A8C-4D61-4D69-A581-B6A47218E8AD}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Kata\Kata.csproj">
       <Project>{5BCDABEB-A611-4C62-AF1B-BA5E8E8BBB60}</Project>
       <Name>Kata</Name>
