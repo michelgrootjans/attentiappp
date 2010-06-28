@@ -35,6 +35,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\tools\NUnit\bin\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\tools\Rhino.Mocks\Rhino.Mocks.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -43,8 +47,14 @@
   <ItemGroup>
     <Compile Include="ActionTests.cs" />
     <Compile Include="BowlingGameTests.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerLogic.cs" />
+    <Compile Include="CustomerLogicTests.cs" />
+    <Compile Include="CustomerTests.cs" />
     <Compile Include="Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="ICustomer.cs" />
+    <Compile Include="ICustomerDao.cs" />
     <Compile Include="PredicateTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
