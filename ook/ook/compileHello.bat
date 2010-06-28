@@ -1,1 +1,0 @@
-ook.exe -ook hello.exe hello.ook

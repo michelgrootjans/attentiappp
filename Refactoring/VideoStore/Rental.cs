@@ -20,5 +20,15 @@ namespace VideoStore
         {
             get { return movie; }
         }
+
+        public double GetCharge()
+        {
+            return movie.GetCharge(DaysRented);
+        }
+
+        public int GetFrequentRenterPoints()
+        {
+            return movie.GetFrequentRenterPoints(DaysRented);
+        }
     }
 }
