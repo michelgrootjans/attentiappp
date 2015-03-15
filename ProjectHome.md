@@ -1,0 +1,1 @@
+Documentation and code examples of principles, patterns and practices, given at Attentia
